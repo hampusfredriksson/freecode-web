@@ -3,7 +3,7 @@ import React from "react";
 const about = () => {
   return (
     <div>
-      <div className="mt-60 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
+      <div className="flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
         <a
           href="https://nextjs.org/docs"
           className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
