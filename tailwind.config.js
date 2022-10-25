@@ -8,6 +8,10 @@ module.exports = {
     extend: {
       colors: {
         "purple-freecode": "#A852C7",
+        linkedin: "#0072b1",
+        mail: "#DB4437",
+        discord: "#7289DA",
+        twitter: "#1DA1F2",
       },
     },
   },
