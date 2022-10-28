@@ -12,28 +12,10 @@ export default function footer() {
     <>
       <footer className="relative pt-8 pb-6">
         <div className="container mx-auto px-4">
+          <hr className="my-2 border-gray-200" />
           <div className="flex flex-wrap text-left lg:text-left">
             <div className="w-full lg:w-6/12 px-4 mb-8">
-              <BsFillHouseFill size={35} />
-              <h5 className="text-md mt-0 mb-2">
-                <a
-                  href="https://www.google.se/maps/place/David+Bagares+gata+26B,+111+38+Stockholm/@59.3372595,18.0633202,17z/data=!3m1!4b1!4m5!3m4!1s0x465f9d5d679ff00d:0xa827691a1a799dcb!8m2!3d59.3372595!4d18.0655088"
-                  target="_blank"
-                  rel="noreferrer">
-                  David Bagares gata 26B, 111 38 Stockholm
-                </a>
-              </h5>
-              <div className="my-4 lg:mb-0 flex flex-row justify-start items-start">
-                <a
-                  href="https://twitter.com/FreeCodeAB"
-                  target="no_blank"
-                  rel="noreferrer">
-                  <button
-                    className={`${buttonStyling} hover:text-twitter`}
-                    type="button">
-                    <SiTwitter size={20} />
-                  </button>
-                </a>
+              <div className="my-2 lg:mb-0 flex flex-row justify-start -mx-4 items-start">
                 <a
                   href="https://www.linkedin.com/company/freecode/"
                   target="no_blank"
@@ -54,6 +36,16 @@ export default function footer() {
                     <SiDiscord size={20} />
                   </button>
                 </a>
+                <a
+                  href="https://twitter.com/FreeCodeAB"
+                  target="no_blank"
+                  rel="noreferrer">
+                  <button
+                    className={`${buttonStyling} hover:text-twitter`}
+                    type="button">
+                    <SiTwitter size={20} />
+                  </button>
+                </a>
                 <a href="mailto:info@freecode.se">
                   <button
                     className={`${buttonStyling} hover:text-mail`}
@@ -61,6 +53,18 @@ export default function footer() {
                     <SiGmail size={20} />
                   </button>
                 </a>
+              </div>
+              <div className="mt-10">
+                <BsFillHouseFill size={30} />
+                <h4 className="text-sm">
+                  <a
+                    href="https://www.google.se/maps/place/David+Bagares+gata+26B,+111+38+Stockholm/@59.3372595,18.0633202,17z/data=!3m1!4b1!4m5!3m4!1s0x465f9d5d679ff00d:0xa827691a1a799dcb!8m2!3d59.3372595!4d18.0655088"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-mono">
+                    David Bagares gata 26B, 111 38 Stockholm
+                  </a>
+                </h4>
               </div>
             </div>
             <div className="w-full lg:w-6/12 px-4">
@@ -100,7 +104,7 @@ export default function footer() {
               </div>
             </div>
           </div>
-          <hr className="my-6 border-gray-200" />
+          <hr className="my-2 border-gray-200" />
           <div className="flex flex-wrap items-center md:justify-between justify-center">
             <div className="w-full md:w-4/12 px-4 mx-auto text-center">
               <div className="text-sm text-gray-500 flex justify-center font-semibold py-1">
