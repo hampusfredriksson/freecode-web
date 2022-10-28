@@ -1,72 +1,100 @@
+import React from "react";
 import { NextPage } from "next";
-import React, { useEffect } from "react";
+import Image from "next/image";
 
 const Consultant: NextPage = () => {
   const consultants = [
     {
       id: "1",
       name: "Hampus",
-      about: "Plays sport XYZ blah blah blah",
-      image: "/public/images/party.svg",
+      title: "Frontend dev",
+      about:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio aut cum quaerat maxime dolores alias qui aliquam voluptatibus fugit quas?",
+      image:
+        "https://doodleipsum.com/700/avatar?bg=D98D63&i=8ea4626088daa443e5a3d13e1658f832",
     },
     {
       id: "2",
       name: "Kalle",
+      title: "Fullstack dev",
       about: "Dont plays sport XYZ blah blah blah",
+      image:
+        "https://doodleipsum.com/700/avatar?bg=6392D9&i=df724d7c95f42ff94943275dcdcbacfc",
     },
     {
       id: "3",
       name: "Anders",
-      about: "Lorem ipsum",
+      title: "Frontend dev",
+      about:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio aut cum quaerat maxime dolores alias qui aliquam voluptatibus fugit quas? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio aut cum quaerat maxime dolores alias qui aliquam voluptatibus fugit quas?",
+      image:
+        "https://doodleipsum.com/700/avatar?bg=6392D9&i=ddca8586297823667d3bc8df76612061",
     },
     {
       id: "4",
       name: "Palle",
+      title: "DevOps engineer",
       about: "Lorem lorem ",
+      image:
+        "https://doodleipsum.com/700/avatar?bg=6392D9&i=0bdc1ecca366772a1c4b55232ef1e6c5",
     },
+    {
+      id: "5",
+      name: "Malle",
+      title: "Cloud Architect",
+      about: "Lorem sorem",
+      image:
+        "https://doodleipsum.com/700/avatar?bg=6392D9&i=c2a46927c51b9a0707dcd491590fe419",
+    },
+    {
+      id: "6",
+      name: "Tjalle",
+      title: "Frontend dev",
+      about:
+        "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.",
+      image:
+        "https://doodleipsum.com/700/avatar?bg=6392D9&i=c2a46927c51b9a0707dcd491590fe419",
+    },
+    ,
   ];
-
+  // BUG This needs to be fixed since it slows down the page render
   return (
     <>
       <div className="flex justify-center mt-24">
         <h1 className="font-mono text-4xl">Möt teamet</h1>
       </div>
-
-      <div>
-        <img
-          src="https://source.unsplash.com/random/350x350"
-          alt=" random imgee"
-          className="w-full object-cover object-center rounded-lg shadow-md"
-        />
-
-        <div className="relative px-4 -mt-16  ">
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <div className="flex items-baseline">
-              <span className="bg-teal-200 text-teal-800 text-xs px-2 inline-block rounded-full uppercase font-semibold tracking-wide">
-                New
-              </span>
-              <div className="ml-2 text-gray-600 uppercase text-xs font-semibold tracking-wider">
-                2 baths &bull; 3 rooms
+      <div className="container max-w-7xl mx-auto px-4">
+        <div className="flex flex-wrap">
+          {consultants.map((consult, index) => (
+            <div
+              className="w-full md:w-6/12 flex justify-center lg:w-3/12 lg:mb-0 mb-12 px-4"
+              key={consult?.id}>
+              <div className="px-6 py-20">
+                <div className="group">
+                  <Image
+                    alt="John Doe"
+                    src={consult?.image}
+                    width={300}
+                    height={300}
+                    className="rounded-3xl shadow-lg max-w-full h-auto align-middle border-none undefined"
+                  />
+                  <div className="top-0 left-0 w-full h-0 flex flex-col justify-center items-center transition-all transform translate-y-8 opacity-0 duration-500 group-hover:opacity-90 group-hover:translate-y-0">
+                    <p className=" top-0 left-0 rounded-md bg-slate-200 w-auto max-w-[300px] py-2 px-6 text-center">
+                      {consult?.about}
+                    </p>
+                  </div>
+                </div>
+                <div className="pt-4 text-center">
+                  <h1 className="text-gray-900 sm:text-center text-xl font-serif font-bold leading-normal mt-0 mb-2">
+                    {consult?.name}
+                  </h1>
+                  <div className="text-blue-gray-700 text-base font-light leading-relaxed mt-0 mb-2 border-slate-400 border">
+                    {consult?.title}
+                  </div>
+                </div>
               </div>
             </div>
-
-            <h4 className="mt-1 text-xl font-semibold uppercase leading-tight truncate">
-              A random Title
-            </h4>
-
-            <div className="mt-1">
-              $1800
-              <span className="text-gray-600 text-sm"> /wk</span>
-            </div>
-            <div className="mt-4">
-              <span className="text-teal-600 text-md font-semibold">
-                4/5 ratings{" "}
-              </span>
-              <span className="text-sm text-gray-600">
-                (based on 234 ratings)
-              </span>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </>
