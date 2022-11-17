@@ -22,27 +22,30 @@ const Home: NextPage = () => {
       <div className="w-full h-screen">
         <video
           src="/images/code.mp4"
-          // autoPlay
+          autoPlay
           loop
           muted
           className="w-full h-full object-fill"
         />
       </div>
 
-      <main className="flex md:flex-row flex-col sm:py-16 py-6 px-20 mb-20">
-        <div className="flex-1 flex justify-center items-start flex-col xl:px-0 sm:px-16 px-6">
-          <div className="flex flex-row justify-between mx-20 items-center w-full">
-            <h1 className="flex-1 text-4xl font-bold tracking-tight text-purple-freecode sm:text-5xl md:text-6xl">
-              Konsulter <br className="sm:block" />{" "}
-              <span className="text-gradient">I</span>{" "}
+      <main className="flex md:flex-row flex-col sm:py-16 my-10 px-20 mb-20">
+        <div className="flex justify-center items-center flex-col xl:px-0 px-6">
+          <div className="flex flex-row justify-between items-center w-full">
+            <h1 className="text-6xl font-bold text-purple-freecode">
+              Konsulter
+              <div className="sm:block">
+                {" "}
+                <span className="flex justify-center sm:text-center">
+                  I
+                </span>{" "}
+              </div>
             </h1>
           </div>
 
-          <h1 className="font-semibold ss:text-[68px] mx-20 text-[52px] text-black w-full">
-            Världsklass.
-          </h1>
+          <h2 className="flex justify-end text-5xl text-black">Världsklass.</h2>
           <div>
-            <p className="max-w-[470px] mt-5 flex justify-center">
+            <p className="max-w-[470px]  mt-5 flex justify-center">
               {description}
             </p>
           </div>

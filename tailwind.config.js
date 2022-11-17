@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "purple-freecode": "#A852C7",
+        "purple-freecode": "#4e2465",
         linkedin: "#0072b1",
         mail: "#DB4437",
         discord: "#7289DA",
